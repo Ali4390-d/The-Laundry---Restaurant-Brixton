@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE LAUNDRY | All Day Bistro & Wine Shop - Brixton</title>
+<meta name="description" content="The Laundry - Brixton's hidden gem. All day dining, natural wines, and seasonal ingredients. Join us for brunch, lunch, or dinner.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <a href="#home" class="logo">
+    <svg viewBox="0 0 24 24"><path d="M3 7h18M5 7v13h14V7M9 11h6M9 15h6" /></svg>
+    THE LAUNDRY
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#food" class="nav-link">Food & Drink</a>
+    <a href="#brunch" class="nav-link">Brunch</a>
+    <a href="#events" class="nav-link">Group Dining</a>
+    <a href="#events" class="nav-link">Catering</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#wild-table" class="nav-link">The Wild Table</a>
+  </nav>
+  <a href="#contact" class="res-btn">Reservations</a>
+  <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2000&auto=format&fit=crop" alt="Moody Brixton Bistro Interior">
+  </div>
+  <div class="weather-widget">
+    <i class="fas fa-sun"></i> 37°C • Sunny
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow" style="color: var(--brass);">Brixton, London</span>
+    <h1>THE <em>LAUNDRY</em></h1>
+    <p class="hero-tagline">All Day Bistro & Wine Shop</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-brass">Reservations</a>
+      <a href="#food" class="btn btn-outline-light">View Menu</a>
+      <a href="#" class="btn btn-outline-light">Order Wine</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">Welcome to Brixton</span>
+        <h2>Brixton's Hidden Gem</h2>
+        <span class="chalk">Good food, natural wine, zero pretension.</span>
+        <p>Nestled in the vibrant heart of Brixton, The Laundry is an all-day bistro and wine shop born from a love of seasonal ingredients and relaxed dining. What started as a local laundering facility has been transformed into a warm, industrial-chic haven for food lovers.</p>
+        <p>We serve uncomplicated, delicious food from morning till night, paired with an eclectic selection of natural and low-intervention wines. Whether you're grabbing a quick coffee, lingering over brunch, or enjoying a late-night glass, you're always welcome here.</p>
+        
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-leaf"></i></div>
+            <div>
+              <h4>Sustainability</h4>
+              <p>Sourcing locally and ethically, minimizing waste, and supporting British farmers.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-users"></i></div>
+            <div>
+              <h4>Community</h4>
+              <p>A true neighborhood spot where everyone is treated like family.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <h4>Quality</h4>
+              <p>From the coffee beans to the wine list, we obsess over the details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" alt="The Laundry Interior">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOD & DRINK ============ -->
+<section class="section section-dark" id="food">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Food & Drink</span>
+      <h2>Seasonal & Uncomplicated</h2>
+      <p>Explore our offerings throughout the day. From fresh morning bakes to hearty evening dinners and an enviable wine list.</p>
+    </div>
+    
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" onclick="filterMenu(event, 'all')">All</button>
+      <button class="tab-btn" onclick="filterMenu(event, 'brunch')">Brunch</button>
+      <button class="tab-btn" onclick="filterMenu(event, 'mains')">Mains</button>
+      <button class="tab-btn" onclick="filterMenu(event, 'wine')">Wine Shop</button>
+    </div>
+    
+    <div class="menu-grid">
+      <div class="menu-item reveal" data-category="brunch">
+        <div class="menu-item-icon"><i class="fas fa-egg"></i></div>
+        <h4>Brixton Bake</h4>
+        <p>Sourdough, smashed avocado, poached eggs, dukkah, chili oil.</p>
+        <span class="price">£9.50</span>
+      </div>
+      <div class="menu-item reveal" data-category="brunch">
+        <div class="menu-item-icon"><i class="fas fa-mug-saucer"></i></div>
+        <h4>Morning Cup</h4>
+        <p>Single-origin espresso, flat white, or cold brew with cream.</p>
+        <span class="price">£3.00</span>
+      </div>
+      <div class="menu-item reveal" data-category="mains">
+        <div class="menu-item-icon"><i class="fas fa-bowl-food"></i></div>
+        <h4>Wild Table Special</h4>
+        <p>Slow-braised lamb shoulder, polenta, gremolata, market greens.</p>
+        <span class="price">£16.00</span>
+      </div>
+      <div class="menu-item reveal" data-category="wine">
+        <div class="menu-item-icon"><i class="fas fa-wine-glass-alt"></i></div>
+        <h4>Natural Orange</h4>
+        <p>Skin-contact Georgian Rkatsiteli, funky, bright, and organic.</p>
+        <span class="price">£8.50 / £42.00</span>
+      </div>
+      <div class="menu-item reveal" data-category="mains">
+        <div class="menu-item-icon"><i class="fas fa-fish"></i></div>
+        <h4>Market Catch</h4>
+        <p>Pan-seared sea bream, fennel salad, citrus dressing, capers.</p>
+        <span class="price">£14.50</span>
+      </div>
+      <div class="menu-item reveal" data-category="wine">
+        <div class="menu-item-icon"><i class="fas fa-wine-bottle"></i></div>
+        <h4>Pet-Nat Rosé</h4>
+        <p>Sparkling, slightly cloudy, bursting with strawberry notes.</p>
+        <span class="price">£9.00 / £45.00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRUNCH ============ -->
+<section class="section" id="brunch" style="background: var(--cream);">
+  <div class="container">
+    <div class="brunch-grid">
+      <div class="brunch-img reveal">
+        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=1000&auto=format&fit=crop" alt="Brunch Table">
+      </div>
+      <div class="brunch-text reveal">
+        <span class="eyebrow">Weekends</span>
+        <span class="chalk">Brunch is better at The Laundry</span>
+        <h2>Bottomless & Beautiful</h2>
+        <p>Our weekend brunch is a Brixton ritual. Gather your friends, order bottomless mimosas, and settle in for a slow morning. We bake fresh daily, and our kitchen comes alive with the smells of fresh coffee and sizzling pans.</p>
+        
+        <div class="brunch-features">
+          <div class="brunch-feature"><i class="fas fa-mug-hot"></i> Bottomless Coffee & Mimosas</div>
+          <div class="brunch-feature"><i class="fas fa-bacon"></i> Full English & Vegan Options</div>
+          <div class="brunch-feature"><i class="fas fa-clock"></i> Sat & Sun: 9am - 3pm</div>
+        </div>
+        
+        <a href="#contact" class="btn btn-outline-brass" style="color: var(--green); border-color: var(--green);">Book Brunch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GROUP DINING & CATERING ============ -->
+<section class="section section-green" id="events">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Celebrate With Us</span>
+      <h2>Group Dining & Catering</h2>
+      <p>Perfect for celebrations, meetings, and events. We offer private dining, large group bookings, and off-site catering.</p>
+    </div>
+    
+    <div class="events-grid">
+      <div class="event-card reveal">
+        <div class="event-icon"><i class="fas fa-users"></i></div>
+        <h4>Group Dining</h4>
+        <p>Reserve our large communal tables or semi-private areas for groups of 8 to 20. Set menus available.</p>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-icon"><i class="fas fa-utensils"></i></div>
+        <h4>Private Hire</h4>
+        <p>Take over the whole venue for corporate events, weddings, or milestone birthdays.</p>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-icon"><i class="fas fa-box"></i></div>
+        <h4>Catering</h4>
+        <p>Bring The Laundry to your office or home. We deliver seasonal platters and wine packages across London.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE WILD TABLE ============ -->
+<section class="section wild-table" id="wild-table">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow" style="color: var(--brass);">A Unique Experience</span>
+      <span class="chalk">Gather around</span>
+      <h2>THE WILD TABLE</h2>
+      <p>Step into our chef's communal dining experience. A seasonal feast served family-style on our grand oak table. Expect natural wines, foraged ingredients, and conversation with fellow food lovers. A truly Brixton affair.</p>
+      <a href="#contact" class="btn btn-brass">Reserve a Seat</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Find Us</span>
+      <h2>Visit The Laundry</h2>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="open-badge"><span class="dot"></span> Open now</div>
+        <h3>Contact & Hours</h3>
+        <div class="info-row"><i class="fas fa-map-marker-alt"></i> 12-14 Brixton Station Road, London SW9 8PA</div>
+        <div class="info-row"><i class="fas fa-phone"></i> +44 20 7738 1234</div>
+        <div class="info-row"><i class="fas fa-envelope"></i> info@thelaundrybrixton.com</div>
+        <div class="info-row"><i class="fas fa-clock"></i> Mon - Sun: 9:00am – 11:00pm</div>
+        <a href="#" class="btn btn-brass" style="margin-top: 1rem;">Make a Reservation</a>
+      </div>
+      <div class="map-placeholder reveal">
+        <div class="map-pin">
+          <i class="fas fa-map-pin"></i>
+          <p>BRIXTON<br><small>SW9</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>THE LAUNDRY</h3>
+        <p>All Day Bistro & Wine Shop. Bringing seasonal food and natural wines to the heart of Brixton.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#food">Food & Drink</a></li>
+          <li><a href="#wild-table">The Wild Table</a></li>
+          <li><a href="#contact">Reservations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><a href="#">Mon-Fri: 9am - 11pm</a></li>
+          <li><a href="#">Sat-Sun: 9am - 11pm</a></li>
+          <li><a href="#">Brunch: Weekends</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col newsletter">
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Email address">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>&copy; 2024 The Laundry Brixton. All rights reserved.</div>
+      <div><a href="#">Privacy Policy</a> • <a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Custom Script -->
+<script src="script.js"></script>
+</body>
+</html>
